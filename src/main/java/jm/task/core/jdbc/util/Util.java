@@ -9,8 +9,11 @@ public class Util {
 
     public static Connection getConnection() {
         try {
-            return  DriverManager.getConnection("jdbc:mysql://localhost:3306/Task2",
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Task2",
                     "root", "springcourse");
+            connection.setAutoCommit(false);
+            return connection;
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

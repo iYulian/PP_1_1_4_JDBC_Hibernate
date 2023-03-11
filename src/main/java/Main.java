@@ -1,9 +1,11 @@
+import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
+import jm.task.core.jdbc.service.UserService;
 import jm.task.core.jdbc.service.UserServiceImpl;
 
 public class Main {
     public static void main(final String[] args) {
 
-        UserServiceImpl userService = new UserServiceImpl();
+        UserService userService = new UserServiceImpl();
 
         userService.createUsersTable();
 
